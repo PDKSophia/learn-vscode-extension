@@ -46,8 +46,21 @@
       {
         "command": "beehive.keybindings",
         "title": "demo4: beehive.keybindings !"
+      },
+      {
+        "command": "beehive.customMenu",
+        "title": "demo5: 启动自定义菜单"
       }
     ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "beehive.customMenu",
+          "alt": "beehive.customMenu",
+          "group": "navigation"
+        }
+      ]
+    },
     "keybindings": [
       {
         "command": "beehive.keybindings",
