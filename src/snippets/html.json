@@ -1,0 +1,7 @@
+{
+  "PDK": {
+    "prefix": ["PDK", "PD", "PK", "DK"],
+    "body": ["<PDK>", "${1}", "</PDK>"],
+    "description": "彭道宽自定义的snippets"
+  }
+}

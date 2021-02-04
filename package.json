@@ -68,6 +68,12 @@
         "mac": "Cmd+]",
         "when": "editorTextFocus"
       }
+    ],
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./src/snippets/html.json"
+      }
     ]
   },
   "scripts": {
