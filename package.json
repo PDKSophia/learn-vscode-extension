@@ -10,7 +10,11 @@
     "Other"
   ],
   "activationEvents": [
-    "*"
+    "onCommand:beehive.inputName",
+    "onCommand:beehive.getCurrentFilePath",
+    "onCommand:beehive.customWelcome",
+    "onCommand:beehive.keybindings",
+    "onCommand:beehive.customMenu"
   ],
   "main": "./dist/extension.js",
   "contributes": {
