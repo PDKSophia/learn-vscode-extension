@@ -10,6 +10,8 @@
     "Other"
   ],
   "activationEvents": [
+    "onView:BeeHive-Command",
+    "onView:BeeHive-PackageAnalysis",
     "onCommand:beehive.inputName",
     "onCommand:beehive.getCurrentFilePath",
     "onCommand:beehive.customWelcome",
@@ -18,6 +20,27 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "sugar",
+          "title": "Sugar-BeeHive",
+          "icon": "./src/logo/sugar.svg"
+        }
+      ]
+    },
+    "views": {
+      "sugar": [
+        {
+          "id": "BeeHive-Command",
+          "name": "01.命令集"
+        },
+        {
+          "id": "BeeHive-PackageAnalysis",
+          "name": "02.包分析"
+        }
+      ]
+    },
     "configuration": {
       "type": "object",
       "title": "BeeHive Title",

@@ -8,6 +8,7 @@ export function activate(context: vscode.ExtensionContext) {
   require('./beehive-keybindings')(context) // demo4 快捷键事件注册
   require('./beehive-customMenu')(context) // demo5 自定义菜单
   require('./beehive-hoverTips')(context) // demo6 悬停提示
+  require('./beehive-sidebar')(context) // demo8 自定义侧边栏入口和面板
 }
 
 export function deactivate() {}
