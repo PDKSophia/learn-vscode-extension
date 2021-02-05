@@ -9,11 +9,16 @@
 - [05. 自定义菜单 Menu-例子](https://github.com/PDKSophia/learn-vscode-extension/issues/5)
 - [06. 悬停提示-例子](https://github.com/PDKSophia/learn-vscode-extension/issues/6)
 - [07. 代码片段-例子](https://github.com/PDKSophia/learn-vscode-extension/issues/7)
+- [08. 自定义侧边栏+面板-例子](https://github.com/PDKSophia/learn-vscode-extension/issues/8)
 
 <hr />
 
 [vscode 官方文档](https://code.visualstudio.com/api)
 
-关键有效的问答那个
+关键有效的 API 字段链接
 
 - [Contribution Points](https://code.visualstudio.com/api/references/contribution-points)
+
+- [侧边栏](https://code.visualstudio.com/api/references/contribution-points#contributes.viewsContainers)
+
+- [侧边栏面板内容](https://code.visualstudio.com/api/extension-guides/tree-view#tree-data-provider)
