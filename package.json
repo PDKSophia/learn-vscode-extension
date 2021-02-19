@@ -16,7 +16,8 @@
     "onCommand:beehive.getCurrentFilePath",
     "onCommand:beehive.customWelcome",
     "onCommand:beehive.keybindings",
-    "onCommand:beehive.customMenu"
+    "onCommand:beehive.customMenu",
+    "onCommand:beehive.customUserConfig"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -42,18 +43,18 @@
       ]
     },
     "configuration": {
-      "type": "object",
-      "title": "BeeHive Title",
+      "title": "sugar-demo-vscode",
       "properties": {
-        "vscodePluginDemo.yourName": {
+        "sugar-demo-vscode.matchConfig": {
           "type": "string",
-          "default": "guest",
-          "description": "your name"
-        },
-        "vscodePluginDemo.showTip": {
-          "type": "boolean",
-          "default": true,
-          "description": "custom welcome !"
+          "description": "sugar-demo-vscode 配置，默认低配版本",
+          "enum": [
+            "lowMatch",
+            "middleMatch",
+            "highMatch"
+          ],
+          "default": "lowMatch",
+          "scope": "window"
         }
       }
     },
@@ -77,6 +78,10 @@
       {
         "command": "beehive.customMenu",
         "title": "demo5: 启动自定义菜单"
+      },
+      {
+        "command": "beehive.customUserConfig",
+        "title": "demo10: 显示首选项matchConfig设置"
       }
     ],
     "menus": {

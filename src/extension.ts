@@ -9,6 +9,7 @@ export function activate(context: vscode.ExtensionContext) {
   require('./beehive-customMenu')(context) // demo5 自定义菜单
   require('./beehive-hoverTips')(context) // demo6 悬停提示
   require('./beehive-sidebar')(context) // demo8 自定义侧边栏入口和面板
+  require('./beehive-customUserConfig')(context) // demo10 自定义首选项设置
 }
 
 export function deactivate() {}

@@ -26,29 +26,39 @@ const scripts = [
  * @description 重写每个节点
  */
 export class SideBarEntryItem extends vscode.TreeItem {
-  constructor(private version: string, public readonly label: string, public readonly collapsibleState: vscode.TreeItemCollapsibleState
+  constructor(
+    private version: string,
+    public readonly label: string,
+    public readonly collapsibleState: vscode.TreeItemCollapsibleState
   ) {
     super(label, collapsibleState)
     this.tooltip = `${this.label}-${this.version}`
-    this.description = `${this.version}-${Math.ceil(Math.random() * 1000)}`
+    this.description = `这是说明`
   }
 }
 
 /**
  * @description 入口文件
  */
-export class SideBarBeeHiveCommand implements vscode.TreeDataProvider<SideBarEntryItem> {
+export class SideBarBeeHiveCommand
+  implements vscode.TreeDataProvider<SideBarEntryItem> {
   constructor(private workspaceRoot?: string) {}
   getTreeItem(element: SideBarEntryItem): vscode.TreeItem {
     return element
   }
 
-  getChildren(element?: SideBarEntryItem): vscode.ProviderResult<SideBarEntryItem[]> {
+  getChildren(
+    element?: SideBarEntryItem
+  ): vscode.ProviderResult<SideBarEntryItem[]> {
     if (element) {
       //子节点
       var childrenList = []
       for (let index = 0; index < scripts.length; index++) {
-        var item = new SideBarEntryItem('1.0.0', scripts[index].script, vscode.TreeItemCollapsibleState.None)
+        var item = new SideBarEntryItem(
+          '1.0.0',
+          scripts[index].script,
+          vscode.TreeItemCollapsibleState.None
+        )
         item.command = {
           command: 'BeeHive-Command.openChild', //命令id
           title: scripts[index].script,
@@ -60,24 +70,45 @@ export class SideBarBeeHiveCommand implements vscode.TreeDataProvider<SideBarEnt
     } else {
       //根节点
       return [
-        new SideBarEntryItem('1.0.0', '按钮组', vscode.TreeItemCollapsibleState.Collapsed),
+        new SideBarEntryItem(
+          '1.0.0',
+          '项目一',
+          vscode.TreeItemCollapsibleState.Collapsed
+        ),
+        new SideBarEntryItem(
+          '1.0.0',
+          '项目二',
+          vscode.TreeItemCollapsibleState.Collapsed
+        ),
+        new SideBarEntryItem(
+          '1.0.0',
+          '项目三',
+          vscode.TreeItemCollapsibleState.Collapsed
+        ),
       ]
     }
   }
 }
 
-export class SideBarBeeHivePackageAnalysis implements vscode.TreeDataProvider<SideBarEntryItem> {
+export class SideBarBeeHivePackageAnalysis
+  implements vscode.TreeDataProvider<SideBarEntryItem> {
   constructor(private workspaceRoot?: string) {}
   getTreeItem(element: SideBarEntryItem): vscode.TreeItem {
     return element
   }
 
-  getChildren(element?: SideBarEntryItem): vscode.ProviderResult<SideBarEntryItem[]> {
+  getChildren(
+    element?: SideBarEntryItem
+  ): vscode.ProviderResult<SideBarEntryItem[]> {
     if (element) {
       //子节点
       var childrenList = []
       for (let index = 0; index < scripts.length; index++) {
-        var item = new SideBarEntryItem('1.0.0', scripts[index].script, vscode.TreeItemCollapsibleState.None)
+        var item = new SideBarEntryItem(
+          '1.0.0',
+          scripts[index].script,
+          vscode.TreeItemCollapsibleState.None
+        )
         item.command = {
           command: 'BeeHive-PackageAnalysis.openChild', //命令id
           title: scripts[index].script,
@@ -89,7 +120,11 @@ export class SideBarBeeHivePackageAnalysis implements vscode.TreeDataProvider<Si
     } else {
       //根节点
       return [
-        new SideBarEntryItem('1.0.0', '按钮组', vscode.TreeItemCollapsibleState.Collapsed),
+        new SideBarEntryItem(
+          '1.0.0',
+          '按钮组',
+          vscode.TreeItemCollapsibleState.Collapsed
+        ),
       ]
     }
   }
